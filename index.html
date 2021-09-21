@@ -2,7 +2,7 @@
   <head
     <meta charset="utf-8">
     <title>Accessibility Course Overview</title>
-    <link rel="stylesheet" href="project2.css?cache_version=2.1">
+    <link rel="stylesheet" href="project2.css?cache_version=2.5">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <script src="project2.js"></script>
   </head>
@@ -21,13 +21,18 @@
       <h1>Accessibility Overview</h1>
       <div id="accessibilitybanner"></div>
       <main>
-        <video width="480" height="360" id="thevideo">
-          <source src="employment-movie.mp4" type="video/mp4">
-        </video>
-        <div id="videoplayer" tabindex="5">
-          <img width="50px" height="50px" src="pics/play.png">
+        <h2>Video on disability employment</h2>
+        <p>The following video discusses employment rates for Americans with and without disabilities.</p>
+        <h3>Video Preference Settings</h3>
+        <h4>Audio Descriptions</h4>
+        <p>Audio descriptions are additional audio tracks added to a video which describe the contents displayed visually.</p>
+        <label for="audioDescriptions">Use Audio Descriptions</label> 
+        <input type="checkbox" id="audioDescriptions" name="audioDescriptions" value="on">  
+        <div class='backgroundWrapper'>
+          <div class="hidden" id="iFrameBackground"></div>
         </div>
-
+        <iframe width="640" height="500" id="employmentVideo"></iframe>
+        
         <h2 id="links" class="heading2">Links</h2>
         <ul>
           <li><a href="http://accessibility.cs.cmu.edu">Accessibility Research at CMU</a><br></li>
@@ -61,4 +66,5 @@
 
     </div><!-- end div.container -->
   </body>
+  <script src="videoToggle.js"></script>
 </html>
