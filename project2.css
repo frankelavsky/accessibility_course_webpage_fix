@@ -4,6 +4,7 @@ html,body {
 }
 
 .container {
+  position: relative;
   margin: auto;
   width: 800px;
 }
@@ -43,6 +44,14 @@ input,textarea {
   width: 857px;
   height: 207px;
   background-image: url(pics/accessibilityoverviewbanner.png);
+}
+
+h1 {
+  font-size: 3.1em;
+  position: absolute;
+  left: 85px;
+  top: 37px;
+  -webkit-text-stroke: white 2px;
 }
 
 @media (min-width: 450px) {
