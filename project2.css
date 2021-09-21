@@ -36,7 +36,7 @@ input,textarea {
 }
 
 .error {
-  color: red;
+  color: darkred;
 }
 
 #accessibilitybanner {
