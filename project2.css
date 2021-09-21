@@ -40,6 +40,28 @@ input,textarea {
   color: darkred;
 }
 
+iframe {
+  border-width: 0;
+}
+
+.backgroundWrapper {
+  position: relative;
+}
+
+.hidden {
+  display: none;
+}
+
+#iFrameBackground {
+  position: absolute;
+  margin: 0;
+  padding: 0;
+  width: 330px;
+  height: 425px;
+  top: 55px;
+  background: #949494;
+  z-index: -1;
+}
 #accessibilitybanner {
   width: 857px;
   height: 207px;
