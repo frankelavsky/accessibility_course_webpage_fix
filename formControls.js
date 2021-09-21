@@ -25,24 +25,23 @@ $(document).ready(function() {
   });
 
   // Form validation
-  $("#signupbutton").click(function() {
-    if($("#fn").val()=="" || $("#mi").val()=="" || $("#ln").val()=="") {
+  $("#signupbutton").click((e) => {
+    e.preventDefault();
+    let errorText = ""
+    if($("#fn").val()=="" || $("#ln").val()=="") {
       $("#name").addClass("error");
-
-      return;
+      errorText = "Please provide a First and Last Name. "
     } else {
       $("#name").removeClass("error");
     }
 
     if($("#em").val()=="") {
       $("#email").addClass("error");
-
-      return;
+      errorText += "Please provide an email."
     } else {
       $("#name").removeClass("error");
     }
-
-    alert("Thank you!  Please watch your email for our exciting newsletter and offers!");
+    alert(errorText || "Thank you!  Please watch your email for our exciting newsletter and offers!");
   });
 });
 
